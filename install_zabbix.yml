@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+  tasks:
+
+  - name: install docker 
+    ansible.builtin.yum:
+      name: docker-ce-cli.x86_64
+      state: latest
+
+  - name: install containerd
+    yum: 
+      name: containerd.io.x86_64
+      state: latest
+
+  - name: install docker-ce
+    yum:
+      name: docker-ce.x86_64
+      state: latest
+
+ 

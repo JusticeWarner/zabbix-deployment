@@ -1,0 +1,24 @@
+---
+
+- hosts: all
+  tasks:
+
+  - name: install lsof 
+    ansible.builtin.yum:
+      name: lsof
+      state: latest
+
+  - name: install vim
+    yum: 
+      name: vim
+      state: latest
+
+  - name: install zsh
+    yum:
+      name: zsh
+      state: latest
+
+  - name: install docker rootless
+    yum:
+      name: docker-ce-rootless-extras.x86_64
+      state: latest
